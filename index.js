@@ -1,10 +1,16 @@
 const express = require('express');
-//const mongoose = require('mongoose');
-//const cors = require ('cors');
+const mongoose = require('mongoose');
+const cors = require ('cors');
 const dotenv = require('dotenv');
-const { default: mongoose } = require('mongoose');
 const app = express();
 dotenv.config();
+
+const espacioComRoutes = require('./routes/espacioComRoutes.js');
+app.use=(cors());
+app.use= (express.json());
+app.options('*',cors());
+app.use('/api',espacioComRoutes);
+
 
 const options={
     useNewUrlParser: true,
@@ -30,4 +36,3 @@ app.listen(process.env.PORT, ()=>{
 
 
 })
-
