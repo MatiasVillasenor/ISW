@@ -3,6 +3,6 @@ const reservaEspacioController = require('../controllers/reservaEspacio');
 
 const api = express.Router();
 
-api.post('/rervaEspacio',reservaEspacioController.createreservaEspacio);
+api.post('/reservaEspacio',reservaEspacioController.createreservaEspacio);
 
 module.exports = api;
