@@ -1,13 +1,13 @@
 const reservaEspacio = require('../models/reservaEspacio');
 
 const createreservaEspacio = (req,res)=>{
-    const {espacioReservado,FechaInicio,FechaTermino,observacion,stadoEspacio,estadoReserva} =req.body
+    const {espacioReservado,FechaInicio,FechaTermino,observacion,estadoEspacio,estadoReserva} =req.body
     const newreservaEspacio = new reservaEspacio({
         espacioReservado,
         FechaInicio,
         FechaTermino,
         observacion,
-        stadoEspacio,
+        estadoEspacio,
         estadoReserva
     })
     newreservaEspacio.save((error,reservaEspacio)=>{
